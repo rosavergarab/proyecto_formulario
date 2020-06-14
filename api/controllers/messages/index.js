@@ -13,7 +13,7 @@ router.route(`/`)
         const mensaje ={
             id: moduloMensajes.longitudMensaje(),
             content: req.body.content,
-            date: Date.now(),
+            date: Date().toString(),
             userId: req.body.userId
         };
         moduloMensajes.nuevoMensaje(mensaje);
