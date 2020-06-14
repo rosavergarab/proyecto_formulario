@@ -2,6 +2,7 @@ const express = require(`express`);
 const router = express.Router();
 
 const moduloMensajes = require(`./../../services/messages`);
+const dateUtilities = require(`./../../utilities/date`);
 
 router.use(express.json());
 
@@ -13,7 +14,7 @@ router.route(`/`)
         const mensaje ={
             id: moduloMensajes.longitudMensaje(),
             content: req.body.content,
-            date: Date().toString(),
+            date: dateUtilities.obtenerFecha(),
             userId: req.body.userId
         };
         moduloMensajes.nuevoMensaje(mensaje);
