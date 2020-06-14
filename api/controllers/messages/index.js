@@ -1,23 +1,23 @@
 const express = require(`express`);
 const router = express.Router();
 
-const mensajes = require(`./../../services/messages`);
+const moduloMensajes = require(`./../../services/messages`);
 
 router.use(express.json());
 
 router.route(`/`)
     .get((req, res)=>{
-        res.send(mensajes.cargarMensaje());
+        res.status(200).send(moduloMensajes.cargarMensaje());
     })
     .post((req, res)=>{
         const mensaje ={
-            id: mensajes.longitudMensaje(),
+            id: moduloMensajes.longitudMensaje(),
             content: req.body.content,
             date: Date.now(),
             userId: req.body.userId
         };
-        mensajes.nuevoMensaje(mensaje);
-        res.send(`El menaje ha sido creado`);
+        moduloMensajes.nuevoMensaje(mensaje);
+        res.status(200).send(`El mensaje ha sido creado`);
     });
 
 router.route(`/:id`)
