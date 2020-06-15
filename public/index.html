@@ -4,13 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Contacto</title>
+    <script src="main.js"></script>
 </head>
 <body>
     <h1>CONTACTO</h1>
-    <form>
-        <p><label>Nombre <input type="text"/></label></p>
-        <p><label>Correo <input type="email"/></label></p>
-        <p><label>Teléfono <input type="number"/></label></p>
+    <form onsubmit="return false">
+        <p><label>Nombre <input type="text" id="nombre"/></label></p>
+        <p><label>Correo <input type="email" id="email"/></label></p>
+        <p><label>Teléfono <input type="number" id="telefono"/></label></p>
+        <p>Pais 
+            <select name="Pais" id="pais">
+                <option value="Colombia" selected>Colombia</option> 
+                <option value="USA">Usa</option>
+                <option value="Canada">Canada</option>
+              </select>
+        </p>
+        <p>
+            <textarea name="textarea" rows="10" cols="50" id="mensaje">Mensajes</textarea>
+        </p>
+        <p><button onclick="cargarContacto()">Enviar</button></p>
+        <p>
+            <img src="mapa2.jpg" width="500" heigth="400">
+        </p>
     </form>
     <div></div>
 

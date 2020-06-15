@@ -1,0 +1,3 @@
+PROYECTO FORMULARIO DE CONTACTOS
+
+Construir una app que consiste en un formulario web de contacto accesible desde la URL http://localhost/. El formulario se debe visualizar utilizando bootstrap y la información se debe enviar hacia una api. Los campos del formulario son: Nombre (texto), teléfono (numérico), correo (email), país (campo seleccionable con 3 opciones: Colombia, USA y Canadá), mensaje (textarea). Los campos Nombre, Correo y Mensaje son obligatorios tanto en el frontend como en el backend. Si falta alguno de estos campos se debe mostrar un mensaje de error. Se debe poder consultar el listado de mensajes en la ruta http://localhost/api/messages/ (no tiene que hacer la vista de la lista de mensajes, si lo desean está bien)
