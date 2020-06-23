@@ -1,5 +1,6 @@
 const nuevoContacto = () =>{
     const url = `/api/contact`
+    if((document.getElementById(`nombre`).value !==``)&&(document.getElementById(`email`).value !==``)&&(ocument.getElementById(`telefono`).value !==``)&&(document.getElementById(`pais`).value !==``)&&(document.getElementById(`mensaje`).value !==``)){
     const contacto = {
         name: document.getElementById(`nombre`).value,
         email: document.getElementById(`email`).value,
@@ -25,4 +26,10 @@ const nuevoContacto = () =>{
           document.getElementById(`mensaje`).value = ``;
           alert(`El contacto ha sido enviado`)
       });
+    }
+    else
+    {
+      const html = `Todos los campos deben ser diligenciados`;
+      document.getElementById(`contacto`).innerHTML = html;
+    };
 };
