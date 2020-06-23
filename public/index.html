@@ -22,23 +22,35 @@
           <div class="col-sm">
             <h2>Registro de Contacto</h2>
             <form onsubmit="return false">
-                <p><label>Nombre <input type="text" id="nombre"/></label></p>
-                <p><label>Correo <input type="email" id="email"/></label></p>
-                <p><label>Teléfono <input type="number" id="telefono"/></label></p>
-                <p>Pais 
-                    <select name="Pais" id="pais">
-                        <option value="Colombia" selected>Colombia</option> 
-                        <option value="USA">Usa</option>
-                        <option value="Canada">Canada</option>
-                      </select>
-                </p>
-                <p>
-                    <textarea name="textarea" rows="10" cols="50" id="mensaje">Mensajes</textarea>
-                </p>
-                <p><button onclick="cargarContacto()">Enviar</button></p>
-                <p>
-                    <img src="mapa2.jpg" width="500" heigth="400">
-                </p>
+              <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" class="form-control" id="nombre" aria-describedby="nameHelp" placeholder="nombre completo">
+                <small id="nameHelp" class="form-text text-muted">Escriba nombre completo</small>
+              </div>
+              <div class="form-group">
+                <label>Correo</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="texto@dominio">
+                <small id="emailHelp" class="form-text text-muted">Escriba correo electrónico</small>
+              </div>
+              <div class="form-group">
+                <label>Teléfono</label>
+                <input type="number" class="form-control" id="telefono" aria-describedby="phoneHelp" placeholder="eje:1234567">
+                <small id="phoneHelp" class="form-text text-muted">Escriba número de teléfono sin espacios ni caracteres</small>
+              </div>
+              <div class="form-group">
+                <label for="pais">País</label>
+                <select class="form-control" id="pais">
+                  <option>Colombia</option>
+                  <option>USA</option>
+                  <option>Canada</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="mensaje">Escriba su mensaje: </label>
+                <textarea class="form-control" id="mensaje" rows="10" cols="50"></textarea>
+              </div>
+              <button type="submit" onclick="cargarContacto()" class="btn btn-primary">Enviar</button>
+              <img src="mapa2.jpg" width="500" heigth="400">
             </form>
             <div id="contacto"></div>
           </div>
